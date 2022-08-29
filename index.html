@@ -49,13 +49,55 @@
       background-color: transparent;
       text-decoration: none;
     }
+
+    .bg-modal {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .modal-content {
+      width: 249px;
+      height: 90px;
+      background-color: #030a1d;
+      color: white;
+      font-family: Poppins;
+      border: 5px;
+      border-radius: 18px;
+      text-align: center;
+      position: relative;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 14px;
+      font-size: 42px;
+      transform: rotate(45deg);
+      cursor: pointer;
+      color: #00a2fd;
+    }
+
+    .close:hover {
+      color: rgb(245, 10, 214);
+    }
   </style>
 
   <body>
     <section class="marketplace">
       <p class="market">MARKET PLACE</p>
       <div class="marketplace-button">
-        <a href="#" id="button" class="button">
+        <a href="#" id="button-1" class="button">
           <img
             src="https://168.119.170.129/wp-content/uploads/2022/08/marketplace-icon.png"
             alt="marketplace icon"
@@ -63,7 +105,7 @@
         >
       </div>
       <div class="stats-button">
-        <a href="#" id="button" class="button">
+        <a href="#" id="button-2" class="button">
           <img
             src="https://168.119.170.129/wp-content/uploads/2022/08/stats-icon.png"
             alt="stats icon"
@@ -71,7 +113,7 @@
         >
       </div>
       <div class="resource-button">
-        <a href="#" id="button" class="button">
+        <a href="#" id="button-3" class="button">
           <img
             src="https://168.119.170.129/wp-content/uploads/2022/08/resources-icon.png"
             alt="resource icon"
@@ -80,4 +122,41 @@
       </div>
     </section>
   </body>
+
+  <!--modal section-->
+
+  <div class="bg-modal">
+    <div class="modal-content">
+      <div class="close">+</div>
+      <p>Coming soon</p>
+    </div>
+  </div>
+
+  <!--script for a pop-up message-->
+
+  <script>
+    document.getElementById("button-1").addEventListener("click", function () {
+      document.querySelector(".bg-modal").style.display = "flex";
+    });
+
+    document.querySelector(".close").addEventListener("click", function () {
+      document.querySelector(".bg-modal").style.display = "none";
+    });
+
+    document.getElementById("button-2").addEventListener("click", function () {
+      document.querySelector(".bg-modal").style.display = "flex";
+    });
+
+    document.querySelector(".close").addEventListener("click", function () {
+      document.querySelector(".bg-modal").style.display = "none";
+    });
+
+    document.getElementById("button-3").addEventListener("click", function () {
+      document.querySelector(".bg-modal").style.display = "flex";
+    });
+
+    document.querySelector(".close").addEventListener("click", function () {
+      document.querySelector(".bg-modal").style.display = "none";
+    });
+  </script>
 </html>
